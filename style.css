@@ -598,6 +598,8 @@ min-height: 100svh;
 
 /* POP OUT CARD */
 .card.active {
+    height: 40vh;
+  width: 50%;
   position: relative;
   align-content: center;
   justify-content:  center;
@@ -619,6 +621,8 @@ min-height: 100svh;
 }
 
 .card.active {
+  height: 40vh;
+  width: 50%;
   animation: popIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 .card.active {
@@ -708,6 +712,25 @@ min-height: 100svh;
 
 
 
+  /* Card size for desktop */
+  .card {
+    width: 300px;
+    max-width: 300px;
+  }
+
+@media (min-width: 600px) {
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 1fr 1fr */
+    gap: 18px;
+
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 16px;
+  }
+
+}
 
 @media (min-width: 768px) {
 
@@ -740,23 +763,3 @@ min-height: 100svh;
     width: 100%;
     padding: 40px 20px;
   }
-
-  /* Card size for desktop */
-  .card {
-    width: 300px;
-    max-width: 300px;
-  }
-
-@media (min-width: 600px) {
-
-  .card-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 1fr 1fr */
-    gap: 18px;
-
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 30px 16px;
-  }
-
-}
