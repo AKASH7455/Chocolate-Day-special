@@ -145,22 +145,28 @@ body {
 
 
 
-.truth-box{
-  height: 100vh;
+.truth-box {
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-.small-heading{
-  font-size: 26px;
-  margin-bottom: 20px;
+  text-align: center;
 }
 
+.small-heading {
+  font-size: clamp(1.2rem, 6vw, 2.6rem);
+  margin-bottom: 2rem;
+  color: #fff4ec;
+  max-width: 90%;
+  color: rgba(70, 30, 15, 0.8);
+}
 
+/* Main Section */
 .truth-dare-section {
-  position: relative;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
   background: linear-gradient(135deg, #b87a5a, #c9906d, #a96b4f);
   display: flex;
   flex-direction: column;
@@ -172,46 +178,42 @@ body {
 
 /* Heading */
 .truth-dare-section h2 {
-  font-size: 40px;
+  font-size: clamp(1.8rem, 6vw, 2.5rem);
   color: #fff4ec;
-  margin-bottom: 40px;
+  margin-bottom: 2rem;
   font-weight: 500;
   letter-spacing: 1px;
-  z-index: 2;
 }
 
 /* Button Wrapper */
 .choice-box {
   display: flex;
-  gap: 30px;
-  z-index: 2;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
 }
 
 /* Buttons */
 .choice-btn {
-  margin-top: 9px;
-  padding: 18px 42px;
-  font-size: 22px;
+  padding: clamp(0.9rem, 3vw, 1.1rem) clamp(1.8rem, 6vw, 2.6rem);
+  font-size: clamp(1rem, 4vw, 1.4rem);
   border: none;
   border-radius: 40px;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.6rem;
   color: #fff;
   font-weight: 500;
   background: linear-gradient(135deg, #5a2d1b, #8b4a2f);
-  box-shadow: 0 15px 35px rgba(70, 30, 15, 0.6);
-  transition: all 0.3s ease;
+  box-shadow: 0 12px 30px rgba(70, 30, 15, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.choice-btn i {
-  font-size: 18px;
-}
-
+/* Hover */
 .choice-btn:hover {
   transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 22px 50px rgba(70, 30, 15, 0.8);
+  box-shadow: 0 20px 45px rgba(70, 30, 15, 0.8);
 }
 
 /* Clover Rain */
@@ -627,140 +629,6 @@ body {
 
 
 
-/* ================================
-   RESPONSIVE MEDIA QUERIES (ALL)
-   MOBILE → TABLET → LAPTOP → LARGE
-================================ */
-
-/* LARGE SCREENS (1200px+) */
-@media (min-width: 1200px) {
-  .hero-content h1 {
-    font-size: 3.2rem;
-  }
-
-  .card {
-    width: 280px;
-     min-height: 280px;
-  }
-}
-
-/* LAPTOPS (992px – 1199px) */
-@media (max-width: 1199px) {
-  .hero-content h1 {
-    font-size: 2.8rem;
-  }
-
-  .truth-dare-section h2 {
-    font-size: 34px;
-  }
-
-  .card {
-    width: 280px;
-     min-height: 280px;
-  }
-}
-
-/* TABLETS (768px – 991px) */
-@media (max-width: 991px) {
-  .hero-content h1 {
-    font-size: 2.4rem;
-  }
-
-  .hero-content p {
-    font-size: 0.95rem;
-  }
-
-  
-  .choice-btn {
-    font-size: 20px;
-    padding: 16px 36px;
-  }
-   .card {
-    width: 280px;
-     min-height: 280px;
-  }
-
-  .card-container {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  }
-}
-
-/* MOBILE (576px – 767px) */
-@media (max-width: 767px) {
-  .hero {
-    padding: 20px;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-btn {
-    padding: 15px 30px;
-    font-size: 0.9rem;
-    gap: 5px;
-  }
-.card-container {
-    grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
-  }
-  .truth-dare-section h2 {
-    font-size: 28px;
-    text-align: center;
-  }
-  .small-heading{
-    text-align: center;
-  }
-
-  .card {
-    width: 240px;        /* controlled width */
-    min-height: 250px;   /* base size only */
-    height: auto;        /* ⭐ MOST IMPORTANT */
-  }
-
-  .emoji {
-    width: 90px;
-    height: 90px;
-  }
-   
-}
-
-/* SMALL MOBILE (≤ 575px) */
-@media (max-width: 575px) {
-  .hero-content h1 {
-    font-size: 1.7rem;
-    line-height: 1.3;
-  }
-
-  .hero-content p {
-    font-size: 0.85rem;
-  }
-   .small-heading{
-    text-align: center;
-  }
-
-
-  .choice-btn {
-    font-size: 18px;
-    padding: 15px 30px;
-    gap: 5px;
-  }
-
-  .section-title {
-    font-size: 28px;
-  }
-
- .card {
-    width: 240px;
-    min-height: 240px;
-    height: auto;        /* ⭐ no fixed height */
-  }
-
-  .emoji {
-    width: 75px;
-    height: 75px;
-  }
-  }
-  
 
 .hint-text {
   position: fixed;
