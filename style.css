@@ -622,7 +622,7 @@ min-height: 100svh;
 
 .card.active {
   height: 40vh;
-  width: 50%;
+  width: 70%;
   animation: popIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 .card.active {
@@ -712,27 +712,8 @@ min-height: 100svh;
 
 
 
-  /* Card size for desktop */
-  .card {
-    width: 300px;
-    max-width: 300px;
-  }
 
 @media (min-width: 600px) {
-
-  .card-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 1fr 1fr */
-    gap: 18px;
-
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 30px 16px;
-  }
-
-}
-
-@media (min-width: 768px) {
 
   /* Card container — grid system */
   .card-container {
@@ -744,12 +725,16 @@ min-height: 100svh;
     margin: 0 auto;
     padding: 40px 20px;
   }
-
-  /* Cards fit grid */
+  
+  
+   /* Card size for desktop */
   .card {
-    width: 100%;
-    max-width: 100%;
+    width: 300px;
+    max-width: 300px;
   }
+  
+
+ 
 
 }
 
