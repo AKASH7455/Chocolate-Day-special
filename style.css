@@ -704,3 +704,59 @@ min-height: 100svh;
   position: relative;
   overflow-x: hidden;
 }
+
+
+
+
+
+@media (min-width: 768px) {
+
+  /* Card container — grid system */
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 1fr 1fr 1fr */
+    gap: 24px;
+
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  /* Cards fit grid */
+  .card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+}
+
+  /* Cards wrapper — proper desktop layout */
+  .cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  /* Card size for desktop */
+  .card {
+    width: 300px;
+    max-width: 300px;
+  }
+
+@media (min-width: 600px) {
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 1fr 1fr */
+    gap: 18px;
+
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 16px;
+  }
+
+}
