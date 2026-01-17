@@ -711,40 +711,66 @@ min-height: 100svh;
 
 
 
+@media (min-width: 600px) and (max-width: 991px) {
 
-
-@media (min-width: 600px) {
-
-  /* Card container — grid system */
   .card-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 1fr 1fr 1fr */
+    grid-template-columns: repeat(2, 1fr); /* 2 cards */
     gap: 24px;
+
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* Active card — grid se bahar */
+  .card.active {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: auto;
+
+    transform: translate(-50%, -50%) scale(1.2);
+    z-index: 1000;
+  }
+}
+
+
+ @media (min-width: 992px) {
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards */
+    gap: 32px;
 
     max-width: 1100px;
     margin: 0 auto;
     padding: 40px 20px;
   }
-  
-  
-   /* Card size for desktop */
+
   .card {
-    width: 300px;
+    width: 100%;
     max-width: 300px;
   }
-  
 
- 
+  /* Active card — proper desktop center */
+  .card.active {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: auto;
 
-}
-
-  /* Cards wrapper — proper desktop layout */
-  .cards-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 24px;
-
-    width: 100%;
-    padding: 40px 20px;
+    transform: translate(-50%, -50%) scale(1.25);
+    z-index: 1000;
   }
+} 
+
+
+
