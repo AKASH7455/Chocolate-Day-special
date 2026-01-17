@@ -711,7 +711,7 @@ min-height: 100svh;
 
 
 
-@media (min-width: 600px) and (max-width: 991px) {
+@media (min-width: 570px) and (max-width: 900px) {
 
   .card-container {
     display: grid;
@@ -742,7 +742,7 @@ min-height: 100svh;
 }
 
 
- @media (min-width: 992px) {
+ @media (min-width: 900px) {
 
   .card-container {
     display: grid;
